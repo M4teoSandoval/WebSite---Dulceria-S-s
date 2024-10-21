@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+header {
+    background: linear-gradient(180deg, rgba(253, 162, 180, 0.8) 0%, rgba(253, 162, 180, 0.8) 80%, rgba(253, 162, 180, 0.4) 100%);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 30%; /* Ajusta la altura según tus necesidades */
+    position: relative; /* Necesario para la posición absoluta de imgFondo */
+}
+
+.logo {
+    margin-right: 20px; /* Espacio entre el logo y la barra de búsqueda */
+}
+
+.logo img {
+    width: 220px; /* Ajusta el tamaño del logo */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Alinea el contenido de la barra de búsqueda al centro */
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    position: absolute; /* Posiciona en relación al header */
+    left: 50%; /* Alinea al centro del header */
+    transform: translateX(-50%); /* Centra el contenedor de búsqueda */
+    z-index: 2; /* Asegúrate de que esté encima de la imagen de fondo */
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 700px; /* Ajusta el ancho de la barra de búsqueda */
+    text-align: center; /* Centra el texto dentro del input */
+    font-weight: bold; /* Aplica negrita al texto */
+    font-size: 18px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -60px; /* Ajusta este margen si es necesario */
+}
+
+.imgFondo {
+    position: absolute; /* Coloca la imagen como fondo */
+    right: 0; /* Alinea a la derecha */
+    top: 0; /* Alinea al top */
+    margin: 0; /* Sin margen */
+    z-index: 1;
+}
+
+.imgFondo img {
+    height: 160px; /* Tamaño de la imagen de fondo */
+    display: block; /* Evita el espacio extra debajo de la imagen */
+}
+
+
+.navbar {
+    background-color: #70B648;
+    padding: 21px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center;
+
+}
+
+.redes {
+    display: flex; /* Usa flexbox para alinear los iconos */
+    gap: 0px; /* Espacio entre iconos */
+    position: absolute; /* Coloca la sección de redes en la parte superior */
+    left: 20px; /* Ajusta el espacio a la izquierda */
+}
+
+.redes img {
+    width: 45px; /* Tamaño de los iconos */
+
+}
+.redes a:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% (puedes ajustar este valor) */
+    transition: transform 0.3s; /* Suaviza la transición del tamaño */
+}
+.nav-menu {
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.nav-menu a {
+    margin: 0 15px; /* Espacio entre los enlaces centrados */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s; /* Suaviza la transición del color */
+}
+.nav-menu a:hover {
+    color: #CCF0F2; /* Color dorado al pasar el cursor (puedes cambiarlo) */
+}
+main {
+    padding: 20px;
+    background-color: rgba(2, 178, 189, 0.2);
+    text-align: center;
+}
+
+.banner {
+    position: relative; /* Permite la colocación de los botones con posición absoluta */
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: center; /* Centra la imagen del banner */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.banner img {
+    width: 70%;
+    margin: 20px 0;
+}
+
+.navigation {
+    position: absolute; /* Permite posicionar los botones a los lados */
+    top: 50%; /* Centra verticalmente los botones */
+    transform: translateY(-50%); /* Ajusta la posición para centrarlo */
+    width: 100%; /* Permite que los botones ocupen el ancho completo */
+    display: flex; /* Usa flexbox para alinear los botones */
+    justify-content: space-between; /* Coloca los botones a los lados */
+    padding: 0 170px; /* Espacio a los lados */
+}
+
+.navigation button {
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Opcional: Puedes añadir efectos visuales al pasar el mouse sobre los botones */
+.navigation button:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+    transition: transform 0.3s; /* Suaviza la transición del tamaño */
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+footer img {
+    width: 75px;
+}
+
+footer a:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% (puedes ajustar este valor) */
+    transition: transform 0.3s; /* Suaviza la transición del tamaño */
+}
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono y el mensaje */
+}
+
+.whatsapp-message {
+    display: none; /* Oculta el mensaje por defecto */
+    margin-left: 10px; /* Espacio entre el ícono y el mensaje */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: white;
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    position: absolute; /* Para que aparezca sobre el ícono */
+    bottom: 50px; /* Ajusta la posición del mensaje */
+    right: 10px; /* Ajusta la posición del mensaje */
+    white-space: nowrap; /* Evita que el texto se divida */
+    z-index: 10; /* Asegura que el mensaje esté sobre otros elementos */
+}
+
+.whatsapp-container:hover .whatsapp-message {
+    display: block; /* Muestra el mensaje al pasar el cursor */
+}
